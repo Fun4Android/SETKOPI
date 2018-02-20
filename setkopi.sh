@@ -44,11 +44,9 @@ echo " [12] Termux Sudo "
 echo " [13] Kali Nethunter "
 echo " [14] PyDdos "
 echo " [15] Hunner "
-echo " [16] Red_Hawk "
-echo " [17] Red_Hawk "
 echo " [x] EXIT "
 echo ""
-read -p " Masukan Pilihan [1-17] : " a
+read -p " Masukan Pilihan [1-15] : " a
 if [ $a -eq 1 ];
 then
 echo ""
@@ -61,13 +59,14 @@ apt install -y zsh
 apt install -y git
 apt install -y unzip
 apt install -y screenfetch
-wget https://github.com/iqbalfaf/zsh-style/install.sh
+wget https://raw.githubusercontent.com/iqbalfaf/SETKOPI/master/zsh-style/install.sh
 chmod +x install.sh
-wget -O $HOME/.oh-my-zsh/templates/termuxer.zsh-theme https://github.com/iqbalfaf/zsh-style/termuxer.zsh-theme 
+./install.sh
+wget -O $HOME/.oh-my-zsh/templates/termuxer.zsh-theme https://raw.githubusercontent.com/iqbalfaf/SETKOPI/master/zsh-style/termuxer.zsh-theme
 cp $PREFIX/etc/profile profile.bak
-wget -O $PREFIX/etc/profile https://github.com/iqbalfaf/zsh-style/profile
+wget -O $PREFIX/etc/profile https://raw.githubusercontent.com/iqbalfaf/SETKOPI/master/zsh-style/profile
 cp $HOME/.zshrc .zshrc.bak
-wget -O $HOME/.zshrc https://github.com/zsh-style/.zshrc
+wget -O $HOME/.zshrc https://raw.githubusercontent.com/iqbalfaf/SETKOPI/master/zsh-style/.zshrc
 read -p " Presh [ ENTER ] to return to menu... "
 ./setkopi.sh
 
